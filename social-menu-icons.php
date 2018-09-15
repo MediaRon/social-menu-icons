@@ -36,7 +36,6 @@ class Social_Menu_Icons {
 	public function get_icons() {
 		// Supported social links icons.
 		$social_links_icons = array(
-			'a.co'            => 'amazon',
 			'amazon.com'      => 'amazon',
 			'behance.net'     => 'behance',
 			'blogger.com'     => 'blogger',
