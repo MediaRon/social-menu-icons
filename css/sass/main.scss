@@ -1,4 +1,4 @@
-.bw-screen-reader-text {
+.smi-screen-reader-text {
 	clip: rect(1px, 1px, 1px, 1px);
 	height: 1px;
 	overflow: hidden;
@@ -8,9 +8,9 @@
 }
 
 /* Icon Sizes */ 
-$sizes: 18 24 36 48;
+$sizes: 12 18 24 36 48;
 @each $size in $sizes {
-	.bw-social-icon-#{$size} svg {
+	.smi-social-icon-#{$size} svg {
 		height: #{$size}px;
 		width: #{$size}px;
 		vertical-align: top;
@@ -34,6 +34,7 @@ $colors: twitter #00aced,
 	google-plus #CF3D2E,
 	instagram #A1755C,
 	linkedin #0085AE,
+	feed #f26522,
 	medium #000000,
 	path #000000,
 	pinterest-alt #CC2127,
@@ -52,24 +53,24 @@ $colors: twitter #00aced,
 	wordpress #21759b,
 	youtube #bb0000
 ;
-.bw-social-menu.bw-social-fill-brand {
+.smi-social-menu.smi-social-fill-brand {
 	@each $color in $colors {
 		.icon-#{nth($color,1)} {
 			fill: #{nth($color,2)};
 		}
 	}	
 }
-.bw-social-menu.bw-social-fill-gray {
+.smi-social-menu.smi-social-fill-gray {
 	.icon {
 		fill: #767676;
 	}
 }
-.bw-social-menu.bw-social-fill-white {
+.smi-social-menu.smi-social-fill-white {
 	.icon {
 		fill: #FFFFFF;
 	}
 }
-.bw-social-menu.bw-social-fill-black {
+.smi-social-menu.smi-social-fill-black {
 	.icon {
 		fill: #000000;
 	}

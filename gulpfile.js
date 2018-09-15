@@ -6,10 +6,30 @@ var gulp = require('gulp'),
 	sourcemaps = require('gulp-sourcemaps'),
 	rename = require('gulp-rename'),
 	plumber = require('gulp-plumber'),
-	phplint = require('phplint')
+	zip = require('gulp-zip'),
+	clean = require('gulp-clean'),
+	runSequence = require('run-sequence');
 
 gulp.task('default', function() {
   // place code for your default task here
+});
+
+gulp.task('zip', function(done) {
+	runSequence('copy_for_zip', 'build_zip', 'clean_zip', done);
+});
+gulp.task('copy_for_zip', function () {
+	return gulp.src('**', !'node_modules')
+		.pipe(gulp.dest('social-menu-icons'));
+});
+gulp.task('build_zip', function () {
+	return gulp.src('**/*')
+		.pipe(clean())
+		.pipe(zip('social-menu-icons.zip'))
+		.pipe(gulp.dest('.'));
+});
+
+gulp.task('clean_zip', function () {
+	return gulp.src('social-menu-icons', { read: false }).pipe(clean())
 });
 
 gulp.task( 'sass', function() {
@@ -33,33 +53,14 @@ gulp.task( 'sass', function() {
 		.pipe(gulp.dest('./css/'));
 } );
 
-gulp.task( 'copysocialsvg', function() {
-	return gulp.src('./node_modules/social-logos/svg-sprite/social-logos.svg')
-   .pipe(gulp.dest('./images'));
-} );
-
-gulp.task('phplint', function (cb) {
-	phplint(['./**/*.php', '!node_modules/**/*', '!vendor/**/*'],  { limit: 10 }, 
-		function (err, stdout, stderr) {
-			if (err) {
-				cb(err);
-			} else {
-				cb();
-			}
-		}
-	);
-});
-
 
 gulp.task( 'watch', function() {
 	
 	// Watch SASS files
 	gulp.watch( './css/sass/**/*.scss', [ 'sass' ] );
 	
-	// Watch font files
-	gulp.watch( './node_modules/social-logos/svg-sprite/social-logos.svg', [ 'copysocialsvg' ] );
 } );
 
 gulp.task('default', function() {
-  gulp.start( [ 'copysocialsvg', 'sass' ] );
+  gulp.start( [ 'sass' ] );
 });

@@ -3,15 +3,15 @@ add_action( 'customize_register', 'bwsocial_customize_register', 10, 1 );
 function bwsocial_customize_register( $wp_customize ) {
 	
 	$wp_customize->add_section(
-		'bw-social',
+		'smi-social',
 		array(
-			'title' => __( 'Social', 'bigwing-social' )
+			'title' => __( 'Social', 'social-menu-icons' )
 		)
 	);
 	
 	// Icon Size
 	$wp_customize->add_setting( 
-		'bw_social[icon_size]',
+		'social_menu_icons[icon_size]',
 		array(
 			'type'    => 'option',
 			'default' => '24'
@@ -19,13 +19,14 @@ function bwsocial_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control( new WP_Customize_Control(
 		$wp_customize,
-		'bw_social[icon_size]',
+		'social_menu_icons[icon_size]',
 		array(
-			'label'   => __( 'Icon Size', 'bigwing-social' ),
-			'section' => 'bw-social',
-			'setting' => 'bw_social[icon_size]',
+			'label'   => __( 'Icon Size', 'social-menu-icons' ),
+			'section' => 'smi-social',
+			'setting' => 'social_menu_icons[icon_size]',
 			'type'    => 'select',
 			'choices' => array(
+				'12' => '12px',
 				'18' => '18px',
 				'24' => '24px',
 				'36' => '36px', 
@@ -36,7 +37,7 @@ function bwsocial_customize_register( $wp_customize ) {
 	
 	// Fill Color
 	$wp_customize->add_setting( 
-		'bw_social[fill_color]',
+		'social_menu_icons[fill_color]',
 		array(
 			'type'    => 'option',
 			'default' => 'gray'
@@ -44,25 +45,25 @@ function bwsocial_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control( new WP_Customize_Control(
 		$wp_customize,
-		'bw_social[fill_color]',
+		'social_menu_icons[fill_color]',
 		array(
-			'label'   => __( 'Fill Color', 'bigwing-social' ),
-			'section' => 'bw-social',
-			'setting' => 'bw_social[fill_color]',
+			'label'   => __( 'Fill Color', 'social-menu-icons' ),
+			'section' => 'smi-social',
+			'setting' => 'social_menu_icons[fill_color]',
 			'type'    => 'select',
 			'choices' => array(
-				'brand'   => __( 'Brand Colors', 'bigwing-social' ),
-				'gray'    => _x( 'Gray', 'color', 'bigwing-social' ),
-				'white'   => _x( 'White', 'color', 'bigwing-social' ), 
-				'black'   => _x( 'Black', 'color', 'bigwing-social' ),
-				'custom'  => __( 'Custom Color', 'bigwing-social' )
+				'brand'   => __( 'Brand Colors', 'social-menu-icons' ),
+				'gray'    => _x( 'Gray', 'color', 'social-menu-icons' ),
+				'white'   => _x( 'White', 'color', 'social-menu-icons' ), 
+				'black'   => _x( 'Black', 'color', 'social-menu-icons' ),
+				'custom'  => __( 'Custom Color', 'social-menu-icons' )
 			),
 		)
 	) );
 	
 	// Fill Color Custom
 	$wp_customize->add_setting( 
-		'bw_social[fill_color_custom]',
+		'social_menu_icons[fill_color_custom]',
 		array(
 			'type'    => 'option',
 			'default' => '#767676'
@@ -70,11 +71,11 @@ function bwsocial_customize_register( $wp_customize ) {
 	);
 	$wp_customize->add_control( new WP_Customize_Color_Control(
 		$wp_customize,
-		'bw_social[fill_color_custom]',
+		'social_menu_icons[fill_color_custom]',
 		array(
-			'label'   => __( 'Fill Color Custom', 'bigwing-social' ),
-			'section' => 'bw-social',
-			'setting' => 'bw_social[fill_color_custom]',
+			'label'   => __( 'Fill Color Custom', 'social-menu-icons' ),
+			'section' => 'smi-social',
+			'setting' => 'social_menu_icons[fill_color_custom]',
 		)
 	) );
 }
