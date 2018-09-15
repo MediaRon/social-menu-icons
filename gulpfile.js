@@ -18,18 +18,17 @@ gulp.task('zip', function(done) {
 	runSequence('copy_for_zip', 'build_zip', 'clean_zip', done);
 });
 gulp.task('copy_for_zip', function () {
-	return gulp.src('**', !'node_modules')
-		.pipe(gulp.dest('social-menu-icons'));
+	return gulp.src(['**/*', '!node_modules/', '!node_modules/**', '!**/package.json','!**/gulpfile.js', '!**/package-lock.json'])
+		.pipe(gulp.dest('dist'));
 });
 gulp.task('build_zip', function () {
-	return gulp.src('**/*')
-		.pipe(clean())
+	return gulp.src('dist/**/*')
 		.pipe(zip('social-menu-icons.zip'))
 		.pipe(gulp.dest('.'));
 });
 
 gulp.task('clean_zip', function () {
-	return gulp.src('social-menu-icons', { read: false }).pipe(clean())
+	return gulp.src('dist/social-menu-icons', { read: false }).pipe(clean())
 });
 
 gulp.task( 'sass', function() {
