@@ -1,10 +1,10 @@
-# Social Media Menu for WordPress
+# Social Menu Icons for WordPress
 
 Social icons for WordPress
 
 ## Description 
 
-Social Media Menu allows you to use the built-in WordPress menu system to create social menus.
+Social Menu Icons allows you to use the built-in WordPress menu system to create social menus.
 
 This plugin uses <a href="https://github.com/Automattic/social-logos">Social Logos</a> by <a href="https://github.com/Automattic">Automattic</a>.
 
