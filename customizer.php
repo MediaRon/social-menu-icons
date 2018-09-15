@@ -78,4 +78,28 @@ function bwsocial_customize_register( $wp_customize ) {
 			'setting' => 'social_menu_icons[fill_color_custom]',
 		)
 	) );
+
+	// Fill Color
+	$wp_customize->add_setting( 
+		'social_menu_icons[layout]',
+		array(
+			'type'    => 'option',
+			'default' => 'list-item'
+		)	
+	);
+	$wp_customize->add_control( new WP_Customize_Control(
+		$wp_customize,
+		'social_menu_icons[layout]',
+		array(
+			'label'   => __( 'Fill Color', 'social-menu-icons' ),
+			'section' => 'smi-social',
+			'setting' => 'social_menu_icons[layout]',
+			'type'    => 'select',
+			'choices' => array(
+				'list-item'   => __( 'List Items', 'social-menu-icons' ),
+				'vertical'    => __( 'Vertical', 'social-menu-icons' ),
+				'horizontal'   => __( 'Horizontal', 'social-menu-icons' ),
+			),
+		)
+	) );
 }

@@ -99,7 +99,8 @@ class Social_Menu_Icons {
 			'icon_size'         => '24',
 			'fill_color'        => 'gray',
 			'fill_color_custom' => '#767676',
-			'text_color'        => '#FFFFFF'
+			'text_color'        => '#FFFFFF',
+			'layout'            => 'list-item'
 		);
 		return $defaults;
 	}
