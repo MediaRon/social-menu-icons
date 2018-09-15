@@ -326,7 +326,8 @@ class Social_Menu_Icons {
 		$classes = array(
 			'smi-social-menu',
 			'smi-social-icon-' . absint( $options[ 'icon_size' ] ),
-			'smi-social-fill-' . esc_attr( $options[ 'fill_color' ] )
+			'smi-social-fill-' . esc_attr( $options[ 'fill_color' ] ),
+			'smi-layout-' . esc_attr( $options[ 'layout' ] )
 		);
 		$args[ 'container_class' ] .= ' ' . implode( ' ', $classes );
 		$args[ 'container_class' ] = ltrim( $args[ 'container_class' ], ' ' );

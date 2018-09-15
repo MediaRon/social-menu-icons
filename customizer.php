@@ -91,7 +91,7 @@ function bwsocial_customize_register( $wp_customize ) {
 		$wp_customize,
 		'social_menu_icons[layout]',
 		array(
-			'label'   => __( 'Fill Color', 'social-menu-icons' ),
+			'label'   => __( 'Layout', 'social-menu-icons' ),
 			'section' => 'smi-social',
 			'setting' => 'social_menu_icons[layout]',
 			'type'    => 'select',

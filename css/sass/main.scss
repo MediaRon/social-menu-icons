@@ -75,3 +75,25 @@ $colors: twitter #00aced,
 		fill: #000000;
 	}
 }
+.smi-layout-vertical {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: block;
+			margin: 0 0 5px 0;
+		}
+	}
+}
+.smi-layout-horizontal {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		li {
+			display: inline-block;
+			margin-right: 5px;
+		}
+	}
+}
