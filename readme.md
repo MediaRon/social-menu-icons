@@ -52,3 +52,28 @@ While this plugin tries to do the bulk of the hard work when it comes to social 
 * Icon spacing
 * General look/appearance 
 
+## Filters
+
+```php
+/**
+ * Filter Social Icons.
+ *
+ * @since 1.0.0
+ *
+ * @param array $social_links_icons
+ */
+return apply_filters( 'social_menu_icons', $social_links_icons );
+```
+
+```php
+/**
+ * Filter Social Icons Sprite.
+ *
+ * @since 1.0.0
+ *
+ * @param string Absolute directory path to SVG sprite
+ */
+$svg_icons = apply_filters( 'social_menu_icons_sprite', $svg_icons );
+```
+
+
