@@ -18,7 +18,7 @@ gulp.task('zip', function(done) {
 	runSequence('copy_for_zip', 'build_zip', 'clean_zip', done);
 });
 gulp.task('copy_for_zip', function () {
-	return gulp.src(['**/*', '!node_modules/', '!node_modules/**', '!**/package.json','!**/gulpfile.js', '!**/package-lock.json'])
+	return gulp.src(['**/*', '!node_modules/', '!node_modules/**', '!**/package.json','!**/gulpfile.js', '!**/package-lock.json', '!readme.md'])
 		.pipe(gulp.dest('dist'));
 });
 gulp.task('build_zip', function () {
