@@ -5,7 +5,7 @@ function bwsocial_customize_register( $wp_customize ) {
 	$wp_customize->add_section(
 		'smi-social',
 		array(
-			'title' => __( 'Social', 'social-menu-icons' )
+			'title' => __( 'Social Menu Icons', 'social-menu-icons' )
 		)
 	);
 	
