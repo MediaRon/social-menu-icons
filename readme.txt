@@ -24,7 +24,7 @@ You can adjust the:
 * Icon color (using pre-configured colors or selecting a custom one)
 * Layout
 
-https://www.youtube.com/watch?v=LBCjN9qLQ_M?reol=0
+https://www.youtube.com/watch?v=LBCjN9qLQ_M?rel=0
 
 == Installation ==
 
