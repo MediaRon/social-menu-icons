@@ -342,7 +342,7 @@ class Social_Menu_Icons {
 	 * @since 1.0.0
 	 */
 	public function register_nav_menu() {
-		register_nav_menu( 'smi-social', __( 'Social Media Menu', 'social-menu-icons' ) );
+		register_nav_menu( 'smi-social', __( 'Social Menu Icons', 'social-menu-icons' ) );
 	}
 
 	/**
