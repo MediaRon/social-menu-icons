@@ -353,8 +353,7 @@ class Social_Menu_Icons {
 	 * @since 1.0.0
 	 */
 	function register_scripts() {
-		$min_or_not = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-		wp_enqueue_style( 'social-menu-icons', plugins_url( '/css/main' . $min_or_not . '.css', __FILE__ ), array(), '20180914', 'all' );
+		wp_enqueue_style( 'social-menu-icons', plugins_url( '/css/main.min.css', __FILE__ ), array(), '20180919', 'all' );
 	}
 }
 
