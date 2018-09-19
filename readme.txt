@@ -17,61 +17,53 @@ Social Menu Icons allows you to use the built-in WordPress menu system to create
 
 This plugin uses <a href="https://github.com/Automattic/social-logos">Social Logos</a> by <a href="https://github.com/Automattic">Automattic</a>.
 
-Also supports:
+AFeatures:
 
-* Customizer support
-* Add to sidebar or anywhere that supports widgets
+You can adjust the:
+* Icon size
+* Icon color (using pre-configured colors or selecting a custom one)
+* Layout
 
-= Setup Guide =
-Looking for help setting things up? [Read Our Setup Guide](https://mediaron.com/event-tracking-for-gravity-forms/)
+https://www.youtube.com/watch?v=LBCjN9qLQ_M?reol=0
 
 == Installation ==
 
-## Usage
+1. Create the menu
+2. Add social sharing options
+3. Display on your sidebar or use the snippet below.
 
-### Step 1. Create the menu
-
-![create-menu](https://cloud.githubusercontent.com/assets/636521/26325511/ca46e742-3efc-11e7-832e-7e8d8fab4137.gif)
-
-### Step 2. Add Social Items
-
-![add-items](https://cloud.githubusercontent.com/assets/636521/26325584/1c5215de-3efd-11e7-8751-6a91d986eb3a.gif)
-
-### Step 3. Assign Menu
-
-![assign-menu](https://cloud.githubusercontent.com/assets/636521/26325638/56489628-3efd-11e7-9475-37c2a7371d16.gif)
-
-### Step 4. Place the Menu via Code
-
-Find where in your theme you would like the menu to go and use:
-
-```php
+`
 wp_nav_menu( 
 	array( 
 		'theme_location' => 'smi-social',
 	)
 );
-```
+`
 
-Where ```smi-social``` is the slug for the new social menu. 
+Where `smi-social` is the slug for the new social menu. 
 
-### Step 5. Adjust Settings Using the Customizer
+== Frequently Asked Questions ==
 
-![screen shot 2017-05-22 at 2 54 44 pm](https://cloud.githubusercontent.com/assets/636521/26325937/a108a4a4-3efe-11e7-8f5b-cc66586404b9.png)
+= Why Would I Need This =
 
-You can adjust the:
-* Icon size
-* Icon color (using pre-configured colors or selecting a custom one)
+If your theme doesn't support custom social networking, this is the perfect plugin for you.
 
+= My Theme Already Has a Social Menu - Do I need this? =
+
+Probably not, but the customizer settings make this plugin gold.
 
 == Screenshots ==
 
-1. Adding the menu settings
-2. Adding the menu via a widget
-3. Adjust the settings in the customizer
+1. Adjust the customizer settings
+2. Social Menu Icons Output
 
 == Changelog ==
 
 = 1.0.0 =
 * Released 2018-09-20
 * Initial release. 
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+Initial release.
