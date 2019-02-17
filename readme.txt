@@ -2,7 +2,7 @@
 Contributors: ronalfy
 Tags: social menu icons, social menu widget, social icons, social media icons
 Requires at least:4.7
-Tested up to: 4.9
+Tested up to: 5.1
 Stable tag: 1.0.0
 Requires PHP: 5.6
 Donate link: https://mediaron.com/give/
@@ -33,14 +33,14 @@ https://www.youtube.com/watch?v=LBCjN9qLQ_M?rel=0
 3. Display on your sidebar or use the snippet below.
 
 `
-wp_nav_menu( 
-	array( 
+wp_nav_menu(
+	array(
 		'theme_location' => 'smi-social',
 	)
 );
 `
 
-Where `smi-social` is the slug for the new social menu. 
+Where `smi-social` is the slug for the new social menu.
 
 == Frequently Asked Questions ==
 
@@ -61,7 +61,7 @@ Probably not, but the customizer settings make this plugin gold.
 
 = 1.0.0 =
 * Released 2018-09-20
-* Initial release. 
+* Initial release.
 
 == Upgrade Notice ==
 
